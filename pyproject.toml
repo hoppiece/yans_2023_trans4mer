@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "yans-2023-trans4mer"
+version = "0.1.0"
+description = ""
+authors = ["Kenta Shinzato[ 新里顕大 ] <kenta.shinzato@linecorp.com>"]
+readme = "README.md"
+packages = [{include = "yans_2023_trans4mer"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^0.27.9"
+gradio = "^3.41.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
