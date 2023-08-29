@@ -6,11 +6,11 @@
 poetry install
 ```
 
-`.env` ファイルに次の情報を準備する
+`yans_2023_trans4mer/.env` ファイルに次の情報を準備する
 
 ```
-API_ORG=''
+API_ORG='' # Oranization ID
 API_KEY=''
-APP_PASSWORD=''
-APP_USERNAME=''
+APP_PASSWORD='' # 自由に設定する
+APP_USERNAME='' # 自由に設定する admin とかでいい
 ```
