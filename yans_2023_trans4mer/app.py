@@ -62,11 +62,6 @@ def generate(text, select_radio):
     return response["data"][0]["url"]
 
 
-examples = [
-    ["きのこの山"],
-    ["たけのこの里"],
-]
-
 demo = gr.Interface(
     fn=generate,
     inputs=[
@@ -75,7 +70,7 @@ demo = gr.Interface(
     ],
     outputs=gr.components.Image(type="filepath", label="Generated Image"),
     flagging_options=[],
-    # examples=examples,
+    examples=["オンラインチャットは、個人やビジネスで日常的に使われていますが、多くの既存システムは複雑で使いにくい場合があります。この論文では、EasyChatという名前の新しいオンラインチャットシステムを紹介します。このシステムは、シンプルで使いやすく、しかも高いパフォーマンスを持っています。EasyChatは、簡単なインターフェースと速いメッセージ送信機能を備えています。我々はこのシステムを一般の人々が使いやすいように設計し、実装しました。テスト結果によれば、EasyChatは他の一般的なチャットシステムよりも平均で20%速いメッセージ送受信速度を実現しました。このシステムは、家庭での個人使用からビジネスでのチームコミュニケーションまで、幅広い用途で有用です。"],
     title="IdeaIllustrator",
     description="ポスター・スライド作成支援アプリです。論文のアブストラクトからアイコンやダイアグラムを生成します。Promptには論文のアブストを入力してください。ポンチ絵に使う画像の素材が欲しい時は'icon'、ポンチ絵のレイアウト案が欲しい時は'pictogram'を選択してください。"
 )
