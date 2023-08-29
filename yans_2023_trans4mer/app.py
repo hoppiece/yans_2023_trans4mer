@@ -20,7 +20,7 @@ Image prompts:
 - A illustration for the slide. A robot washing papers with the buckets.
 - An pictogram for the slide. A large number of documents are piled up. A robot is sorting through them.
 
-Abstract: 
+Abstract:
 """
 
 def generate(text, select_radio):
@@ -76,6 +76,8 @@ demo = gr.Interface(
     outputs=gr.components.Image(type="filepath", label="Generated Image"),
     flagging_options=[],
     # examples=examples,
+    title="IdeaIllustrator",
+    description="ポスター・スライド作成支援アプリです。論文のアブストラクトからアイコンやダイアグラムを生成します。Promptには論文のアブストを入力してください。ポンチ絵に使う画像の素材が欲しい時は'icon'、ポンチ絵のレイアウト案が欲しい時は'pictogram'を選択してください。"
 )
 
 demo.launch(share=False, auth=(app_username, app_password))
